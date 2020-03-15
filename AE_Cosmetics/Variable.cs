@@ -11,5 +11,9 @@ namespace AE_Cosmetics
         public static string ccDelectStatus = ""; //ประกาศตัวแปรเก็บสถานะการยืนยันการลบสินค้า
         public static string createOrder = "";  //ประกาศตัวแปรเก็บสถานะการสร้างรายการสินค้า
         public static string saveStatus = ""; //ประกาศตัวแปรเก็บสถานะการบันทึกข้อมูล
+        public static string userType = ""; //ประกาศตัวแปรเก็บ
+        public static string firstName = ""; //ประกาศตัวแปรเก็บ
+        public static string lastName = ""; //ประกาศตัวแปรเก็บ
+        public static int sumQuantity = 0;
     }
 }

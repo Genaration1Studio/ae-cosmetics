@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Purchase_Oder));
             this.bunifuElipse_Home = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
@@ -70,7 +70,6 @@
             this.col_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_clearAll = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -103,6 +102,7 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_total = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
+            this.txb_salseName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.picMoney = new System.Windows.Forms.PictureBox();
             this.txb_amount3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.productorderBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -119,11 +119,11 @@
             this.productTableAdapter = new AE_Cosmetics.aeCosmeticsDataSetTableAdapters.productTableAdapter();
             this.orderTableAdapter = new AE_Cosmetics.aeCosmeticsDataSetTableAdapters.orderTableAdapter();
             this.product_orderTableAdapter = new AE_Cosmetics.aeCosmeticsDataSetTableAdapters.product_orderTableAdapter();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCards1.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_orderList)).BeginInit();
             this.bunifuCards3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuCards4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aeCosmeticsDataSet)).BeginInit();
@@ -137,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_mini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse_Home
@@ -282,9 +283,10 @@
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(544, 145);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(46, 35);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(47, 35);
             this.bunifuCustomLabel5.TabIndex = 30;
-            this.bunifuCustomLabel5.Text = "Add";
+            this.bunifuCustomLabel5.Text = "เพิ่ม";
+            this.bunifuCustomLabel5.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
             // 
             // btn_add
             // 
@@ -315,82 +317,82 @@
             // bunifuCustomLabel13
             // 
             this.bunifuCustomLabel13.AutoSize = true;
-            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(15, 77);
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(11, 71);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(71, 14);
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(100, 28);
             this.bunifuCustomLabel13.TabIndex = 29;
-            this.bunifuCustomLabel13.Text = "Description";
+            this.bunifuCustomLabel13.Text = "รายละเอียดสินค้า";
             // 
             // bunifuCustomLabel12
             // 
             this.bunifuCustomLabel12.AutoSize = true;
-            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(514, 76);
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(510, 70);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(50, 14);
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(59, 28);
             this.bunifuCustomLabel12.TabIndex = 28;
-            this.bunifuCustomLabel12.Text = "Amount";
+            this.bunifuCustomLabel12.Text = "ราคารวม";
             // 
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(388, 133);
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(384, 132);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(61, 14);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(84, 28);
             this.bunifuCustomLabel11.TabIndex = 27;
-            this.bunifuCustomLabel11.Text = "Unit Price";
+            this.bunifuCustomLabel11.Text = "ราคาต่อหน่วย";
             // 
             // bunifuCustomLabel10
             // 
             this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(387, 77);
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(383, 71);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(53, 14);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(84, 28);
             this.bunifuCustomLabel10.TabIndex = 26;
-            this.bunifuCustomLabel10.Text = "In Stock";
+            this.bunifuCustomLabel10.Text = "คงเหลือในคลัง";
             // 
             // bunifuCustomLabel9
             // 
             this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(514, 14);
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(510, 10);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(56, 14);
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(48, 28);
             this.bunifuCustomLabel9.TabIndex = 25;
-            this.bunifuCustomLabel9.Text = "Quantity";
+            this.bunifuCustomLabel9.Text = "จำนวน";
             // 
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(387, 15);
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(383, 11);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(30, 14);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(40, 28);
             this.bunifuCustomLabel8.TabIndex = 24;
-            this.bunifuCustomLabel8.Text = "Size";
+            this.bunifuCustomLabel8.Text = "ขนาด";
             // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(149, 15);
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(145, 11);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(84, 14);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(57, 28);
             this.bunifuCustomLabel7.TabIndex = 23;
-            this.bunifuCustomLabel7.Text = "Product Name";
+            this.bunifuCustomLabel7.Text = "ชื่อสินค้า";
             // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(15, 15);
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(11, 11);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(66, 14);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(64, 28);
             this.bunifuCustomLabel6.TabIndex = 22;
-            this.bunifuCustomLabel6.Text = "Product ID";
+            this.bunifuCustomLabel6.Text = "รหัสสินค้า";
             // 
             // txb_amount
             // 
@@ -569,8 +571,8 @@
             // 
             this.dtg_orderList.AllowUserToAddRows = false;
             this.dtg_orderList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtg_orderList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtg_orderList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_orderList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -579,14 +581,14 @@
             this.dtg_orderList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_orderList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_orderList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_orderList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_orderList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_orderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_orderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_ProducID,
@@ -595,14 +597,14 @@
             this.col_UnitPrice,
             this.col_Quantity,
             this.col_Amount});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_orderList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_orderList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_orderList.DoubleBuffered = true;
             this.dtg_orderList.EnableHeadersVisualStyles = false;
             this.dtg_orderList.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
@@ -620,42 +622,42 @@
             // col_ProducID
             // 
             this.col_ProducID.DataPropertyName = "col_ProducID";
-            this.col_ProducID.HeaderText = "Produc ID";
+            this.col_ProducID.HeaderText = "รหัสสินค้า";
             this.col_ProducID.Name = "col_ProducID";
             this.col_ProducID.ReadOnly = true;
             // 
             // col_ProducName
             // 
             this.col_ProducName.DataPropertyName = "col_ProducName";
-            this.col_ProducName.HeaderText = "Produc Name";
+            this.col_ProducName.HeaderText = "ชื่อสินค้า";
             this.col_ProducName.Name = "col_ProducName";
             this.col_ProducName.ReadOnly = true;
             // 
             // col_Size
             // 
             this.col_Size.DataPropertyName = "col_Size";
-            this.col_Size.HeaderText = "Size";
+            this.col_Size.HeaderText = "ขนาด";
             this.col_Size.Name = "col_Size";
             this.col_Size.ReadOnly = true;
             // 
             // col_UnitPrice
             // 
             this.col_UnitPrice.DataPropertyName = "col_UnitPrice";
-            this.col_UnitPrice.HeaderText = "UnitPrice";
+            this.col_UnitPrice.HeaderText = "ราคาต่อหน่วย";
             this.col_UnitPrice.Name = "col_UnitPrice";
             this.col_UnitPrice.ReadOnly = true;
             // 
             // col_Quantity
             // 
             this.col_Quantity.DataPropertyName = "col_Quantity";
-            this.col_Quantity.HeaderText = "Quantity";
+            this.col_Quantity.HeaderText = "จำนวน";
             this.col_Quantity.Name = "col_Quantity";
             this.col_Quantity.ReadOnly = true;
             // 
             // col_Amount
             // 
             this.col_Amount.DataPropertyName = "col_Amount";
-            this.col_Amount.HeaderText = "Amount";
+            this.col_Amount.HeaderText = "ราคารวม";
             this.col_Amount.Name = "col_Amount";
             this.col_Amount.ReadOnly = true;
             // 
@@ -678,16 +680,6 @@
             this.bunifuCards3.Size = new System.Drawing.Size(375, 288);
             this.bunifuCards3.TabIndex = 3;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AE_Cosmetics.Properties.Resources.tenor;
-            this.pictureBox3.Location = new System.Drawing.Point(132, 164);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(109, 112);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            // 
             // bunifuCustomLabel20
             // 
             this.bunifuCustomLabel20.AutoSize = true;
@@ -695,11 +687,11 @@
             this.bunifuCustomLabel20.Enabled = false;
             this.bunifuCustomLabel20.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.bunifuCustomLabel20.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel20.Location = new System.Drawing.Point(160, 42);
+            this.bunifuCustomLabel20.Location = new System.Drawing.Point(118, 33);
             this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
-            this.bunifuCustomLabel20.Size = new System.Drawing.Size(39, 35);
+            this.bunifuCustomLabel20.Size = new System.Drawing.Size(129, 35);
             this.bunifuCustomLabel20.TabIndex = 33;
-            this.bunifuCustomLabel20.Text = "OK";
+            this.bunifuCustomLabel20.Text = "บันทึกใบสั่งซื้อ";
             // 
             // bunifuCustomLabel21
             // 
@@ -708,11 +700,11 @@
             this.bunifuCustomLabel21.Enabled = false;
             this.bunifuCustomLabel21.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.bunifuCustomLabel21.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(142, 111);
+            this.bunifuCustomLabel21.Location = new System.Drawing.Point(118, 99);
             this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(81, 35);
+            this.bunifuCustomLabel21.Size = new System.Drawing.Size(131, 35);
             this.bunifuCustomLabel21.TabIndex = 32;
-            this.bunifuCustomLabel21.Text = "Clear All";
+            this.bunifuCustomLabel21.Text = "ยกเลิกใบสั่งซื้อ";
             // 
             // btn_clearAll
             // 
@@ -733,7 +725,7 @@
             this.btn_clearAll.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(109)))));
             this.btn_clearAll.IdleForecolor = System.Drawing.Color.White;
             this.btn_clearAll.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(109)))));
-            this.btn_clearAll.Location = new System.Drawing.Point(57, 99);
+            this.btn_clearAll.Location = new System.Drawing.Point(57, 87);
             this.btn_clearAll.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btn_clearAll.Name = "btn_clearAll";
             this.btn_clearAll.Size = new System.Drawing.Size(258, 55);
@@ -760,7 +752,7 @@
             this.btn_ok.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(183)))), ((int)(((byte)(121)))));
             this.btn_ok.IdleForecolor = System.Drawing.Color.White;
             this.btn_ok.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(183)))), ((int)(((byte)(121)))));
-            this.btn_ok.Location = new System.Drawing.Point(57, 30);
+            this.btn_ok.Location = new System.Drawing.Point(57, 21);
             this.btn_ok.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(258, 55);
@@ -837,22 +829,22 @@
             // bunifuCustomLabel16
             // 
             this.bunifuCustomLabel16.AutoSize = true;
-            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel16.Font = new System.Drawing.Font("supermarket", 12.83168F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.bunifuCustomLabel16.Location = new System.Drawing.Point(24, 119);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
-            this.bunifuCustomLabel16.Size = new System.Drawing.Size(63, 18);
+            this.bunifuCustomLabel16.Size = new System.Drawing.Size(65, 31);
             this.bunifuCustomLabel16.TabIndex = 32;
-            this.bunifuCustomLabel16.Text = "Change";
+            this.bunifuCustomLabel16.Text = "เงินทอน";
             // 
             // bunifuCustomLabel15
             // 
             this.bunifuCustomLabel15.AutoSize = true;
-            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel15.Font = new System.Drawing.Font("supermarket", 12.83168F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.bunifuCustomLabel15.Location = new System.Drawing.Point(24, 26);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(44, 18);
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(71, 31);
             this.bunifuCustomLabel15.TabIndex = 30;
-            this.bunifuCustomLabel15.Text = "Cash";
+            this.bunifuCustomLabel15.Text = "เงินที่จ่าย";
             // 
             // bunifuCustomLabel22
             // 
@@ -861,11 +853,11 @@
             this.bunifuCustomLabel22.Enabled = false;
             this.bunifuCustomLabel22.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.bunifuCustomLabel22.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(137, 224);
+            this.bunifuCustomLabel22.Location = new System.Drawing.Point(138, 224);
             this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
-            this.bunifuCustomLabel22.Size = new System.Drawing.Size(89, 35);
+            this.bunifuCustomLabel22.Size = new System.Drawing.Size(78, 35);
             this.bunifuCustomLabel22.TabIndex = 31;
-            this.bunifuCustomLabel22.Text = "Calculate";
+            this.bunifuCustomLabel22.Text = "คำนวณ";
             // 
             // txb_change
             // 
@@ -1002,12 +994,12 @@
             // bunifuCustomLabel18
             // 
             this.bunifuCustomLabel18.AutoSize = true;
-            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(299, 19);
+            this.bunifuCustomLabel18.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(299, 15);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
-            this.bunifuCustomLabel18.Size = new System.Drawing.Size(81, 14);
+            this.bunifuCustomLabel18.Size = new System.Drawing.Size(67, 28);
             this.bunifuCustomLabel18.TabIndex = 31;
-            this.bunifuCustomLabel18.Text = "Create Date :";
+            this.bunifuCustomLabel18.Text = "วันที่สร้าง :";
             // 
             // txb_createDate
             // 
@@ -1032,12 +1024,12 @@
             // bunifuCustomLabel17
             // 
             this.bunifuCustomLabel17.AutoSize = true;
-            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Sukhumvit Set", 9.267326F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(16, 19);
+            this.bunifuCustomLabel17.Font = new System.Drawing.Font("supermarket", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(4, 15);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
-            this.bunifuCustomLabel17.Size = new System.Drawing.Size(65, 14);
+            this.bunifuCustomLabel17.Size = new System.Drawing.Size(85, 28);
             this.bunifuCustomLabel17.TabIndex = 30;
-            this.bunifuCustomLabel17.Text = "Order No :";
+            this.bunifuCustomLabel17.Text = "เลขที่ใบสั่งซื้อ :";
             // 
             // txb_orderNo
             // 
@@ -1062,57 +1054,57 @@
             // lal_jq
             // 
             this.lal_jq.AutoSize = true;
-            this.lal_jq.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lal_jq.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lal_jq.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lal_jq.Location = new System.Drawing.Point(962, 101);
+            this.lal_jq.Location = new System.Drawing.Point(962, 96);
             this.lal_jq.Name = "lal_jq";
-            this.lal_jq.Size = new System.Drawing.Size(94, 23);
+            this.lal_jq.Size = new System.Drawing.Size(109, 41);
             this.lal_jq.TabIndex = 4;
-            this.lal_jq.Text = "Calculate\r\n";
+            this.lal_jq.Text = "คำนวณเงิน";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(962, 431);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(962, 422);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(80, 23);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(138, 41);
             this.bunifuCustomLabel1.TabIndex = 5;
-            this.bunifuCustomLabel1.Text = "Menage";
+            this.bunifuCustomLabel1.Text = "จัดการใบสั่งซื้อ";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(22, 431);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(22, 422);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(100, 23);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(127, 41);
             this.bunifuCustomLabel2.TabIndex = 6;
-            this.bunifuCustomLabel2.Text = "Order List";
+            this.bunifuCustomLabel2.Text = "รายการสินค้า";
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(22, 194);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(22, 185);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(139, 23);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(112, 41);
             this.bunifuCustomLabel3.TabIndex = 7;
-            this.bunifuCustomLabel3.Text = "Product Detail";
+            this.bunifuCustomLabel3.Text = "ข้อมูลสินค้า";
             // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(22, 101);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(22, 96);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(120, 23);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(173, 41);
             this.bunifuCustomLabel4.TabIndex = 8;
-            this.bunifuCustomLabel4.Text = "Order Detail";
+            this.bunifuCustomLabel4.Text = "รายละเอียดใบสั่งซื้อ";
             // 
             // lbl_total
             // 
@@ -1131,6 +1123,7 @@
             this.bunifuCards6.BorderRadius = 5;
             this.bunifuCards6.BottomSahddow = true;
             this.bunifuCards6.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(139)))));
+            this.bunifuCards6.Controls.Add(this.txb_salseName);
             this.bunifuCards6.Controls.Add(this.picMoney);
             this.bunifuCards6.Controls.Add(this.lbl_total);
             this.bunifuCards6.Controls.Add(this.txb_amount3);
@@ -1144,6 +1137,18 @@
             this.bunifuCards6.ShadowDepth = 20;
             this.bunifuCards6.Size = new System.Drawing.Size(240, 289);
             this.bunifuCards6.TabIndex = 22;
+            // 
+            // txb_salseName
+            // 
+            this.txb_salseName.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txb_salseName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txb_salseName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "saleName", true));
+            this.txb_salseName.Font = new System.Drawing.Font("Sukhumvit Set", 9.980197F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txb_salseName.ForeColor = System.Drawing.Color.White;
+            this.txb_salseName.Location = new System.Drawing.Point(160, 9);
+            this.txb_salseName.Name = "txb_salseName";
+            this.txb_salseName.Size = new System.Drawing.Size(32, 23);
+            this.txb_salseName.TabIndex = 48;
             // 
             // picMoney
             // 
@@ -1211,13 +1216,13 @@
             // bunifuCustomLabel14
             // 
             this.bunifuCustomLabel14.AutoSize = true;
-            this.bunifuCustomLabel14.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel14.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel14.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(691, 101);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(691, 96);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
-            this.bunifuCustomLabel14.Size = new System.Drawing.Size(56, 23);
+            this.bunifuCustomLabel14.Size = new System.Drawing.Size(141, 41);
             this.bunifuCustomLabel14.TabIndex = 23;
-            this.bunifuCustomLabel14.Text = "Total";
+            this.bunifuCustomLabel14.Text = "ยอดเงินทั้งหมด";
             // 
             // bg_form
             // 
@@ -1275,9 +1280,9 @@
             this.lbl_Header.ForeColor = System.Drawing.Color.White;
             this.lbl_Header.Location = new System.Drawing.Point(24, 12);
             this.lbl_Header.Name = "lbl_Header";
-            this.lbl_Header.Size = new System.Drawing.Size(286, 57);
+            this.lbl_Header.Size = new System.Drawing.Size(159, 57);
             this.lbl_Header.TabIndex = 1;
-            this.lbl_Header.Text = "PURCHASE ORDER";
+            this.lbl_Header.Text = "ขายสินค้า";
             // 
             // productBindingSource
             // 
@@ -1296,24 +1301,34 @@
             // 
             this.product_orderTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AE_Cosmetics.Properties.Resources.tenor;
+            this.pictureBox3.Location = new System.Drawing.Point(117, 156);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(115, 121);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
             // Purchase_Oder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.bunifuCustomLabel14);
             this.Controls.Add(this.bunifuCards6);
-            this.Controls.Add(this.bunifuCustomLabel4);
-            this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.lal_jq);
             this.Controls.Add(this.bunifuCards5);
             this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.bunifuCards3);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.Header);
+            this.Controls.Add(this.bunifuCustomLabel14);
+            this.Controls.Add(this.bunifuCustomLabel4);
+            this.Controls.Add(this.lal_jq);
+            this.Controls.Add(this.bunifuCustomLabel3);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.bunifuCustomLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Purchase_Oder";
@@ -1326,7 +1341,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtg_orderList)).EndInit();
             this.bunifuCards3.ResumeLayout(false);
             this.bunifuCards3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.bunifuCards4.ResumeLayout(false);
             this.bunifuCards4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
@@ -1344,6 +1358,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_mini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1421,15 +1436,8 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txb_quantity3;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txb_productID3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dtg_orderList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_ProducID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_ProducName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Size;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Amount;
         private Bunifu.Framework.UI.BunifuElipse bg_form;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private aeCosmeticsDataSet aeCosmeticsDataSet;
         private System.Windows.Forms.BindingSource productBindingSource;
         private aeCosmeticsDataSetTableAdapters.productTableAdapter productTableAdapter;
@@ -1437,6 +1445,14 @@
         private aeCosmeticsDataSetTableAdapters.orderTableAdapter orderTableAdapter;
         private System.Windows.Forms.BindingSource productorderBindingSource;
         private aeCosmeticsDataSetTableAdapters.product_orderTableAdapter product_orderTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_ProducID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_ProducName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Amount;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txb_salseName;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

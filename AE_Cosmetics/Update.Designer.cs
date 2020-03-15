@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
             this.bunifuElipse_Home = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bg_form = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_productDetail = new Bunifu.Framework.UI.BunifuCards();
             this.btn_inStock2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aeCosmeticsDataSet = new AE_Cosmetics.aeCosmeticsDataSet();
             this.txb_unitPrice2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txb_size2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txb_productID2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -78,8 +80,6 @@
             this.btn_mini = new System.Windows.Forms.PictureBox();
             this.btn_exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.aeCosmeticsDataSet = new AE_Cosmetics.aeCosmeticsDataSet();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter = new AE_Cosmetics.aeCosmeticsDataSetTableAdapters.productTableAdapter();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +88,8 @@
             this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_productDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aeCosmeticsDataSet)).BeginInit();
             this.bunifuCards2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_productList)).BeginInit();
             this.bunifuCards3.SuspendLayout();
@@ -97,8 +99,6 @@
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_mini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aeCosmeticsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse_Home
@@ -154,6 +154,16 @@
             this.btn_inStock2.Name = "btn_inStock2";
             this.btn_inStock2.Size = new System.Drawing.Size(110, 23);
             this.btn_inStock2.TabIndex = 35;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "product";
+            this.productBindingSource.DataSource = this.aeCosmeticsDataSet;
+            // 
+            // aeCosmeticsDataSet
+            // 
+            this.aeCosmeticsDataSet.DataSetName = "aeCosmeticsDataSet";
+            this.aeCosmeticsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txb_unitPrice2
             // 
@@ -214,62 +224,62 @@
             // bunifuCustomLabel13
             // 
             this.bunifuCustomLabel13.AutoSize = true;
-            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(15, 95);
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("supermarket", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(15, 94);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(96, 18);
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(116, 30);
             this.bunifuCustomLabel13.TabIndex = 29;
-            this.bunifuCustomLabel13.Text = "Description";
+            this.bunifuCustomLabel13.Text = "รายละเอียดสินค้า";
             // 
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(653, 20);
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("supermarket", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(653, 19);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(82, 18);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(97, 30);
             this.bunifuCustomLabel11.TabIndex = 27;
-            this.bunifuCustomLabel11.Text = "Unit Price";
+            this.bunifuCustomLabel11.Text = "ราคาต่อหน่วย";
             // 
             // bunifuCustomLabel10
             // 
             this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(775, 20);
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("supermarket", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(775, 19);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(69, 18);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(93, 30);
             this.bunifuCustomLabel10.TabIndex = 26;
-            this.bunifuCustomLabel10.Text = "In Stock";
+            this.bunifuCustomLabel10.Text = "จำนวนในคลัง";
             // 
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(531, 20);
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("supermarket", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(531, 19);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(38, 18);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(46, 30);
             this.bunifuCustomLabel8.TabIndex = 24;
-            this.bunifuCustomLabel8.Text = "Size";
+            this.bunifuCustomLabel8.Text = "ขนาด";
             // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(193, 20);
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("supermarket", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(193, 19);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(112, 18);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(65, 30);
             this.bunifuCustomLabel7.TabIndex = 23;
-            this.bunifuCustomLabel7.Text = "Product Name";
+            this.bunifuCustomLabel7.Text = "ชื่อสินค้า";
             // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Sukhumvit Set", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(15, 20);
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("supermarket", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(15, 19);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(87, 18);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(73, 30);
             this.bunifuCustomLabel6.TabIndex = 22;
-            this.bunifuCustomLabel6.Text = "Product ID";
+            this.bunifuCustomLabel6.Text = "รหัสสินค้า";
             // 
             // txb_inStock
             // 
@@ -405,8 +415,8 @@
             // 
             this.dtg_productList.AllowUserToAddRows = false;
             this.dtg_productList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtg_productList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtg_productList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_productList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -416,14 +426,14 @@
             this.dtg_productList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_productList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_productList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_productList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_productList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_productList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_productList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIDDataGridViewTextBoxColumn,
@@ -433,14 +443,14 @@
             this.unitPriceDataGridViewTextBoxColumn,
             this.inStockDataGridViewTextBoxColumn});
             this.dtg_productList.DataSource = this.productBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_productList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_productList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_productList.DoubleBuffered = true;
             this.dtg_productList.EnableHeadersVisualStyles = false;
             this.dtg_productList.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
@@ -486,11 +496,11 @@
             this.lbl_cancel.Enabled = false;
             this.lbl_cancel.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbl_cancel.ForeColor = System.Drawing.Color.White;
-            this.lbl_cancel.Location = new System.Drawing.Point(153, 283);
+            this.lbl_cancel.Location = new System.Drawing.Point(150, 283);
             this.lbl_cancel.Name = "lbl_cancel";
-            this.lbl_cancel.Size = new System.Drawing.Size(68, 35);
+            this.lbl_cancel.Size = new System.Drawing.Size(67, 35);
             this.lbl_cancel.TabIndex = 22;
-            this.lbl_cancel.Text = "Cancel";
+            this.lbl_cancel.Text = "ยกเลิก";
             // 
             // lbl_save
             // 
@@ -499,11 +509,11 @@
             this.lbl_save.Enabled = false;
             this.lbl_save.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbl_save.ForeColor = System.Drawing.Color.White;
-            this.lbl_save.Location = new System.Drawing.Point(158, 221);
+            this.lbl_save.Location = new System.Drawing.Point(151, 221);
             this.lbl_save.Name = "lbl_save";
-            this.lbl_save.Size = new System.Drawing.Size(54, 35);
+            this.lbl_save.Size = new System.Drawing.Size(65, 35);
             this.lbl_save.TabIndex = 21;
-            this.lbl_save.Text = "Save";
+            this.lbl_save.Text = "บันทึก";
             // 
             // lbl_delete
             // 
@@ -512,11 +522,11 @@
             this.lbl_delete.Enabled = false;
             this.lbl_delete.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbl_delete.ForeColor = System.Drawing.Color.White;
-            this.lbl_delete.Location = new System.Drawing.Point(151, 155);
+            this.lbl_delete.Location = new System.Drawing.Point(138, 155);
             this.lbl_delete.Name = "lbl_delete";
-            this.lbl_delete.Size = new System.Drawing.Size(67, 35);
+            this.lbl_delete.Size = new System.Drawing.Size(87, 35);
             this.lbl_delete.TabIndex = 20;
-            this.lbl_delete.Text = "Delete";
+            this.lbl_delete.Text = "ลบสินค้า";
             // 
             // lbl_Update
             // 
@@ -525,11 +535,11 @@
             this.lbl_Update.Enabled = false;
             this.lbl_Update.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbl_Update.ForeColor = System.Drawing.Color.White;
-            this.lbl_Update.Location = new System.Drawing.Point(148, 92);
+            this.lbl_Update.Location = new System.Drawing.Point(134, 92);
             this.lbl_Update.Name = "lbl_Update";
-            this.lbl_Update.Size = new System.Drawing.Size(74, 35);
+            this.lbl_Update.Size = new System.Drawing.Size(98, 35);
             this.lbl_Update.TabIndex = 19;
-            this.lbl_Update.Text = "Update";
+            this.lbl_Update.Text = "แก้ไขสินค้า";
             // 
             // lbl_add
             // 
@@ -538,11 +548,11 @@
             this.lbl_add.Enabled = false;
             this.lbl_add.Font = new System.Drawing.Font("RSU", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbl_add.ForeColor = System.Drawing.Color.White;
-            this.lbl_add.Location = new System.Drawing.Point(159, 30);
+            this.lbl_add.Location = new System.Drawing.Point(132, 30);
             this.lbl_add.Name = "lbl_add";
-            this.lbl_add.Size = new System.Drawing.Size(46, 35);
+            this.lbl_add.Size = new System.Drawing.Size(95, 35);
             this.lbl_add.TabIndex = 18;
-            this.lbl_add.Text = "Add";
+            this.lbl_add.Text = "เพิ่มสินค้า";
             // 
             // btn_update
             // 
@@ -679,35 +689,35 @@
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(963, 367);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(963, 365);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(80, 23);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(154, 41);
             this.bunifuCustomLabel1.TabIndex = 5;
-            this.bunifuCustomLabel1.Text = "Menage";
+            this.bunifuCustomLabel1.Text = "จัดการคลังสินค้า";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(23, 367);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(23, 365);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(119, 23);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(127, 41);
             this.bunifuCustomLabel2.TabIndex = 6;
-            this.bunifuCustomLabel2.Text = "Product List";
+            this.bunifuCustomLabel2.Text = "รายการสินค้า";
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(23, 102);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(23, 100);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(139, 23);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(112, 41);
             this.bunifuCustomLabel3.TabIndex = 7;
-            this.bunifuCustomLabel3.Text = "Product Detail";
+            this.bunifuCustomLabel3.Text = "ข้อมูลสินค้า";
             // 
             // bunifuCards6
             // 
@@ -751,13 +761,13 @@
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Sukhumvit Set", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("supermarket", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(963, 102);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(963, 100);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(140, 23);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(99, 41);
             this.bunifuCustomLabel4.TabIndex = 23;
-            this.bunifuCustomLabel4.Text = "Product Image";
+            this.bunifuCustomLabel4.Text = "ภาพสินค้า";
             // 
             // Header
             // 
@@ -810,19 +820,9 @@
             this.lbl_Header.ForeColor = System.Drawing.Color.White;
             this.lbl_Header.Location = new System.Drawing.Point(24, 12);
             this.lbl_Header.Name = "lbl_Header";
-            this.lbl_Header.Size = new System.Drawing.Size(284, 57);
+            this.lbl_Header.Size = new System.Drawing.Size(163, 57);
             this.lbl_Header.TabIndex = 1;
-            this.lbl_Header.Text = "UPDATE PRODUCT";
-            // 
-            // aeCosmeticsDataSet
-            // 
-            this.aeCosmeticsDataSet.DataSetName = "aeCosmeticsDataSet";
-            this.aeCosmeticsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "product";
-            this.productBindingSource.DataSource = this.aeCosmeticsDataSet;
+            this.lbl_Header.Text = "คลังสินค้า";
             // 
             // productTableAdapter
             // 
@@ -831,42 +831,42 @@
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "รหัสสินค้า";
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
             this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
             this.productNameDataGridViewTextBoxColumn.DataPropertyName = "productName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "productName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "ชื่อสินค้า";
             this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
             this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "รายละเอียดสินค้า";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sizeDataGridViewTextBoxColumn
             // 
             this.sizeDataGridViewTextBoxColumn.DataPropertyName = "size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "ขนาด";
             this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
             this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // unitPriceDataGridViewTextBoxColumn
             // 
             this.unitPriceDataGridViewTextBoxColumn.DataPropertyName = "unitPrice";
-            this.unitPriceDataGridViewTextBoxColumn.HeaderText = "unitPrice";
+            this.unitPriceDataGridViewTextBoxColumn.HeaderText = "ราคาต่อหน่วย";
             this.unitPriceDataGridViewTextBoxColumn.Name = "unitPriceDataGridViewTextBoxColumn";
             this.unitPriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // inStockDataGridViewTextBoxColumn
             // 
             this.inStockDataGridViewTextBoxColumn.DataPropertyName = "inStock";
-            this.inStockDataGridViewTextBoxColumn.HeaderText = "inStock";
+            this.inStockDataGridViewTextBoxColumn.HeaderText = "จำนวนในคลัง";
             this.inStockDataGridViewTextBoxColumn.Name = "inStockDataGridViewTextBoxColumn";
             this.inStockDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -875,15 +875,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCards6);
-            this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCards3);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.panel_productDetail);
             this.Controls.Add(this.Header);
+            this.Controls.Add(this.bunifuCustomLabel4);
+            this.Controls.Add(this.bunifuCustomLabel3);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.bunifuCustomLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Update";
@@ -892,6 +892,8 @@
             this.Load += new System.EventHandler(this.Update_Load);
             this.panel_productDetail.ResumeLayout(false);
             this.panel_productDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aeCosmeticsDataSet)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_productList)).EndInit();
             this.bunifuCards3.ResumeLayout(false);
@@ -903,8 +905,6 @@
             this.Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_mini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aeCosmeticsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

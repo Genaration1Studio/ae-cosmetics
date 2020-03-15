@@ -91,6 +91,7 @@ namespace AE_Cosmetics
         {
             try
             {
+                txb_salseName.Text = Variable.firstName + " " + Variable.lastName;
                 this.Validate(); //ตรวจสอบข้อมูลที่จะบันทึก
                 this.orderBindingSource.EndEdit(); //ตรวจสอบว่ามีการแก้ไขข้อมูลหรือไม่
                 this.orderTableAdapter.Update(this.aeCosmeticsDataSet.order); //บันทึกข้อมูลของ order ที่ทำการแก้ไข
@@ -397,6 +398,11 @@ namespace AE_Cosmetics
             {
                 MessageBox.Show(ex.Message); //แจ้งเตือนเมื่อโปรแกรมทำงานผิดพลาด
             }
+        }
+
+        private void bunifuCustomLabel5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
